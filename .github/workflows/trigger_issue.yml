@@ -6,10 +6,13 @@ on:
 
 jobs:
   issue_workflow:
-   runs-on: ubuntu-latest
-   steps:
-   - name: Output issue information
-     run: |
-      echo: "issue event_name: ${{ github.event_name }}"
-      echo: "issue event_action: ${{ github.event.action }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output issue information
+        env:
+          EVENT_NAME: "${{ github.event_name }}"
+          EVENT_ACTION: "${{ github.event.action }}"
+        run: echo "este es el event_name, '${EVENT_NAME}' "
+        
+      
     
