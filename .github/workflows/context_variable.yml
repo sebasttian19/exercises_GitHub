@@ -1,7 +1,7 @@
 name: context-variable
 on:
-  push: main
-
+  workflow_dispatch:
+    
 jobs:
   jobs_context_variables:
     runs-on: ubuntu-latest
