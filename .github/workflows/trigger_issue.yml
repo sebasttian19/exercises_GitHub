@@ -3,7 +3,8 @@ name: workflow trigger
 on:
   issues:
     types: [opened]
-
+  workflow_dispatch:
+    
 jobs:
   issue_workflow:
     runs-on: ubuntu-latest
