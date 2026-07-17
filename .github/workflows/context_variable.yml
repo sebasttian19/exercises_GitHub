@@ -1,6 +1,5 @@
 name: context-variable
-on:
-  workflow_dispatch:
+on: [push, workflow_dispatch]
 
 jobs:
   jobs_context_variables:
