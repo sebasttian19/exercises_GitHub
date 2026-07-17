@@ -10,5 +10,12 @@ jobs:
         CONTEXT_VARIABLE: ${{ toJson(github) }}
       run: | 
         echo "nariz de arya"
+        echo "*******************"
+        echo "*******************"
+        echo "*******************"
         echo "${CONTEXT_VARIABLE}"
-        echo "final nariz de arya"
+        echo "*******************"
+        echo "*******************"
+        echo "*******************"
+        echo "Prueba asignar directamente valor variable" 
+        echo "final nariz de arya"  >> $GITHUB_OUTPUT 
