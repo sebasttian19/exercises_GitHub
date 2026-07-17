@@ -9,4 +9,7 @@ jobs:
     - name: To use context context variable
       env:
         CONTEXT_VARIABLE: ${{ toJson(github) }}
-      run: echo "${CONTEXT_VARIABLE}"
+      run: | 
+        echo "nariz de arya"
+        echo "${CONTEXT_VARIABLE}"
+        echo "final nariz de arya"
