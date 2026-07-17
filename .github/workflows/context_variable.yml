@@ -1,0 +1,13 @@
+name: context-variable
+on:
+  push: main
+
+jobs:
+  jobs_context_variables:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: To use context context variable
+      env:
+        CONTEXT_VARIABLE: ${{ toJson(github) }}
+    - name: print variable 
+      run: echo "${CONTEXT_VARIABLE}"
