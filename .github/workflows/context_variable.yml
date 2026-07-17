@@ -18,4 +18,4 @@ jobs:
         echo "*******************"
         echo "*******************"
         echo "Prueba asignar directamente valor variable" 
-        echo "final nariz de arya"  >> $GITHUB_OUTPUT 
+        echo "TRUE_STATEMENT=Possums are terrible." >> $GITHUB_OUTPUT
