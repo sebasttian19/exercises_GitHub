@@ -1,7 +1,7 @@
 name: context-variable
 on:
   workflow_dispatch:
-    
+
 jobs:
   jobs_context_variables:
     runs-on: ubuntu-latest
@@ -9,5 +9,4 @@ jobs:
     - name: To use context context variable
       env:
         CONTEXT_VARIABLE: ${{ toJson(github) }}
-    - name: print variable 
       run: echo "${CONTEXT_VARIABLE}"
