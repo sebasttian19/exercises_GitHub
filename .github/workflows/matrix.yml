@@ -7,11 +7,14 @@ on:
 
 jobs:
   do-things:
-    name: Do things in a Matrix - ${{ matrix.os }}
+    name: Do things in a Matrix - ${{ matrix.os }} , ${{ matrix.node-version }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
+        node-version: [10.x, 12.x, 14.x, 15.x]
     steps: 
-      - name: The thing i'be done - ${{ matrix.os }}
-        run: echo "I've done a thing on ${{ matrix.os }}"
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
