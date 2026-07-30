@@ -14,5 +14,7 @@ jobs:
         run: ls -ltra
       - name: Checkout repository  
         uses: actions/checkout@v3
+        with:
+          clean: true
       - name: 22 List directory contests 22
         run: ls -ltra
