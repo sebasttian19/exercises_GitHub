@@ -1,0 +1,17 @@
+name: Matrx strategy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  do-things:
+    name: Do things in a Matrix - ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    steps: 
+      - name: The thing i'be done - ${{ matrix.os }}
+        run: echo "I've done a thing on ${{ matrix.os }}"
