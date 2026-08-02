@@ -15,7 +15,7 @@ jobs:
       - name: List directory contents
         run: ls -ltra
       - name: Checkout repository  
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
           clean: true
       - name: 22 List directory contests again 22
