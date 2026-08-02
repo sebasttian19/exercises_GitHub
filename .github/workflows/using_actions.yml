@@ -5,13 +5,12 @@ on:
     branches:
       - main
 
-env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
-
 jobs:
   actions:
     name: Run actions
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
     steps: 
       - name: List directory contents
         run: ls -ltra
